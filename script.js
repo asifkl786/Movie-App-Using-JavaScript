@@ -13,6 +13,7 @@ const inputBox = document.querySelector('.inputBox');
         const url = ` http://www.omdbapi.com/?apikey=${myApiKey}&t=${movie}`;
     
         const response = await fetch(url);
+        referrerPolicy: "unsafe-url"
 
         if(!response.ok){
             throw new Error("Unable to fetch movie data.");
